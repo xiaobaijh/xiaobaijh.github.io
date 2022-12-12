@@ -4,12 +4,56 @@
   
     
     <entry>
-      <title>个人博客搭建</title>
-      <link href="/ge-ren-bo-ke-da-jian.html"/>
-      <url>/ge-ren-bo-ke-da-jian.html</url>
+      <title>client源码分析</title>
+      <link href="/client-yuan-ma-fen-xi.html"/>
+      <url>/client-yuan-ma-fen-xi.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WebRTC peerconnection分析</title>
+      <link href="/webrtc-peerconnection-fen-xi.html"/>
+      <url>/webrtc-peerconnection-fen-xi.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h1><p>peerconnection example由peerconnection server和client两部分组成，重点分析client。</p><h1 id="2-类关系"><a href="#2-类关系" class="headerlink" title="2. 类关系"></a>2. 类关系</h1><p>peerconnection_client 是一个用于通话的客户端，核心类为 <strong>Conductor</strong>，它主要包含了 <strong>MainWindow</strong> 和 <strong>PeerConnectionClient</strong> 两个核心类对象（实际上它是一个中转调用的对象），前者是处理 Windows 窗口和消息的类，后者是与信令服务器交互的类，类关系图如下。</p><p><img src="WebRTC-peerconnection%E5%88%86%E6%9E%90/-16706675490483.png" alt="img"></p><p><strong>main_wnd.cc</strong>中实现了四个类，<code>MainWindow</code>是接口类，定义了用于Windows操作界面的切换和视频渲染的接口，<code>MianWin</code>继承了他并实现了接口的方法；<code>VideoRenderer</code>类用于渲染视频帧，并被<code>MainWin</code>拥有（作为MainWin类的成员）。</p><p><strong>conductor.cc</strong>实现了conductor类，实际上使用了观察者模式。</p><p><img src="WebRTC-peerconnection%E5%88%86%E6%9E%90/-16706675747795.png" alt="img"></p><p>xxx_Observer代表是一个观察者，当观察的目标发生变化时，<strong>就会通知xxx_Observer产生一个事件回调</strong>。Conductor继承了xxx_Observer，所以Conductor也是一个观察者身份。因此Conductor会存在很多On_XXXX相关的实际回调。同时由<strong>于conductor拥有MianWind和PeerConnection对象的指针，</strong>因此它main_wnd，Peer_connection_client 也实现了一个观察者模式。Conductor 监听到事件，会通知main_wnd Peer_connection_client进行相关界面更新或者与peer的进一步交互，在这个模式中，Conductor是目标，main_wnd和Peer_connection_client是观察者角色，同时这里还有一个妙用，观察者通过回调，也能调用目标者的相关API。</p><p><strong>peer_connection_client.cc</strong>实现了PeerConnectionClient类和PeerConnectionClientObserver类。用于信令处理与收发。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> WebRTC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WebRTC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人博客搭建踩坑记录</title>
+      <link href="/ge-ren-bo-ke-da-jian.html"/>
+      <url>/ge-ren-bo-ke-da-jian.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-node环境"><a href="#1-node环境" class="headerlink" title="1.node环境"></a>1.node环境</h2><p>需要node.js环境，需要注意的是高版本node和hexo版本不兼容，导致hexo运行时报奇怪的错误，因此建议使用nvm进行包管理。可以参考：</p><blockquote><p><a href="https://blog.csdn.net/Y1914960928/article/details/121748603" target="_blank" rel="noopener">https://blog.csdn.net/Y1914960928/article/details/121748603</a></p></blockquote><p>经测试node12可用。</p><p>安装完node后执行以下命令安装hexo</p><pre><code>npm install hexo-cli -g</code></pre><h2 id="2-本地博客初始化"><a href="#2-本地博客初始化" class="headerlink" title="2.本地博客初始化"></a>2.本地博客初始化</h2><p>新建一个my_blog目录，在命令行中输入</p><pre><code>hexo initnpm i</code></pre><p>无错误信息表示成功，在命令行中</p><pre><code>hexo g &amp;&amp; hexo s</code></pre><p>即可生成静态网页并在本地预览效果。</p><h2 id="3-个性化改造"><a href="#3-个性化改造" class="headerlink" title="3.个性化改造"></a>3.个性化改造</h2><p>hexo的核心配置在 _config.yml下，可以在hexo官网中选择各种好看的主题clone至theme目录下，修改博客根目录下的config文件即可。具体主题的配置可以看主题作者的教程，核心依然是主题下的_config.yml，可以尽情探索。</p><h2 id="4-部署至gitHub-io"><a href="#4-部署至gitHub-io" class="headerlink" title="4.部署至gitHub.io"></a>4.部署至gitHub.io</h2><p>这里注意xxx.github.io这个仓库不能是空的即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
       
       
         <tags>

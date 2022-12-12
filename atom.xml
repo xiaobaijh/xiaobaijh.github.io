@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.xiaobaijh.cn/"/>
-  <updated>2022-12-08T12:08:51.365Z</updated>
+  <updated>2022-12-12T05:00:22.735Z</updated>
   <id>https://www.xiaobaijh.cn/</id>
   
   <author>
@@ -17,15 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>个人博客搭建</title>
-    <link href="https://www.xiaobaijh.cn/ge-ren-bo-ke-da-jian.html"/>
-    <id>https://www.xiaobaijh.cn/ge-ren-bo-ke-da-jian.html</id>
-    <published>2022-12-08T12:04:43.000Z</published>
-    <updated>2022-12-08T12:08:51.365Z</updated>
+    <title>client源码分析</title>
+    <link href="https://www.xiaobaijh.cn/client-yuan-ma-fen-xi.html"/>
+    <id>https://www.xiaobaijh.cn/client-yuan-ma-fen-xi.html</id>
+    <published>2022-12-12T05:00:22.000Z</published>
+    <updated>2022-12-12T05:00:22.735Z</updated>
     
     <summary type="html">
     
     </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>WebRTC peerconnection分析</title>
+    <link href="https://www.xiaobaijh.cn/webrtc-peerconnection-fen-xi.html"/>
+    <id>https://www.xiaobaijh.cn/webrtc-peerconnection-fen-xi.html</id>
+    <published>2022-12-10T07:35:23.000Z</published>
+    <updated>2022-12-11T06:08:44.529Z</updated>
+    
+    <summary type="html">
+    
+      peerconnection是webrtc通信流程中的核心
+    
+    </summary>
+    
+      <category term="WebRTC" scheme="https://www.xiaobaijh.cn/categories/WebRTC/"/>
+    
+    
+      <category term="WebRTC" scheme="https://www.xiaobaijh.cn/tags/WebRTC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客搭建踩坑记录</title>
+    <link href="https://www.xiaobaijh.cn/ge-ren-bo-ke-da-jian.html"/>
+    <id>https://www.xiaobaijh.cn/ge-ren-bo-ke-da-jian.html</id>
+    <published>2022-12-08T12:04:43.000Z</published>
+    <updated>2022-12-09T06:22:43.781Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-node环境&quot;&gt;&lt;a href=&quot;#1-node环境&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://www.xiaobaijh.cn/categories/%E6%9D%82%E8%B0%88/"/>
     
     
       <category term="个人博客" scheme="https://www.xiaobaijh.cn/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
