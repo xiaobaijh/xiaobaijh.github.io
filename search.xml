@@ -4,6 +4,83 @@
   
     
     <entry>
+      <title></title>
+      <link href="/1.ji-chu-gai-nian.html"/>
+      <url>/1.ji-chu-gai-nian.html</url>
+      
+        <content type="html"><![CDATA[<p>预备知识</p><h2 id="1-基础概念"><a href="#1-基础概念" class="headerlink" title="1. 基础概念"></a>1. 基础概念</h2><p>机器学习要解决的场景只需要定义一个灵活的程序算法，其输出由许多<em>参数</em>（parameter）决定，然后使用数据集来确定当下的“最佳参数集”，这些参数通过某种性能度量方式来达到完成任务的最佳性能。</p><p>参数可以被看作旋钮，旋钮的转动可以调整程序的行为。 任一调整参数后的程序被称为<strong><em>模型</em></strong>（model）。 通过操作参数而生成的所有不同程序（输入-输出映射）的集合称为“模型族”。 使用数据集来选择参数的元程序被称为<strong><em>学习算法</em>（</strong>learning algorithm）。</p><p>学习的过程：</p><ol><li><p>从一个随机初始化参数的模型开始，这个模型基本没有“智能”；</p></li><li><p>获取一些数据样本（例如，音频片段以及对应的是或否标签）；</p></li><li><p>调整参数，使模型在这些样本中表现得更好；</p></li><li><p>重复第（2）步和第（3）步，直到模型在任务中的表现令人满意。</p></li></ol><p><img src="https://zh-v2.d2l.ai/_images/ml-loop.svg" alt="../_images/ml-loop.svg"></p><h2 id="机器学习必备组件"><a href="#机器学习必备组件" class="headerlink" title="机器学习必备组件"></a>机器学习必备组件</h2><p>一般的必备组件：</p><ol><li><p>可以用来学习的<em>数据</em>（data）；</p></li><li><p>如何转换数据的<em>模型</em>（model）；</p></li><li><p>一个<em>目标函数</em>（objective function），用来量化模型的有效性；</p></li><li><p>调整模型参数以优化目标函数的<em>算法</em>（algorithm）。</p></li></ol><p>当每个样本的特征类别数量都是相同的时候，其特征向量是固定长度的，这个长度被称为数据的<em>维数</em>（dimensionality）</p><p>在机器学习中，我们需要定义模型的优劣程度的度量，这个度量在大多数情况是“可优化”的，这被称之为<em>目标函数</em>（objective function）。 我们通常定义一个目标函数，并希望优化它到最低点。 因为越低越好，所以这些函数有时被称为<em>损失函数</em>（loss function，或cost function）。</p><p>度学习中，大多流行的优化算法通常基于一种基本方法–<em>梯度下降</em>（gradient descent）。 简而言之，在每个步骤中，梯度下降法都会检查每个参数，看看如果仅对该参数进行少量变动，训练集损失会朝哪个方向移动。</p><h2 id="各种机器学习问题"><a href="#各种机器学习问题" class="headerlink" title="各种机器学习问题"></a>各种机器学习问题</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-2.4.html"/>
+      <url>/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-2.4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数字图像处理2-4"><a href="#数字图像处理2-4" class="headerlink" title="数字图像处理2.4"></a>数字图像处理2.4</h1><h2 id="图像的运算"><a href="#图像的运算" class="headerlink" title="图像的运算"></a>图像的运算</h2><ol><li><p>单点运算 </p><p><img src="G:%5CmyBlog%5CHexo%5Csource_posts%5C%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%5C1678234036929.jpg.jpg" alt="1678234036929.jpg"></p><p>求反–底片；甄别：按某灰度区分成黑白；下阶段低于某个值归零，高于不变；求反，如y=1-x；对比度伸展/压缩变换：取决于斜率；Gamma校正：人眼对光相对强度差敏感，<a href="https://zhuanlan.zhihu.com/p/37800433" target="_blank" rel="noopener">调色名词浅析——Gamma（伽玛）校正 - 知乎 (zhihu.com)</a>。</p></li><li><p>图像之间对应点运算：加减乘除等：<a href="https://blog.csdn.net/Rabbitbubu/article/details/54291335" target="_blank" rel="noopener">(5条消息) 图像基本运算_Rabbitbubu的博客-CSDN博客</a></p></li><li><p>领域运算：</p></li><li><p><img src="G:%5CmyBlog%5CHexo%5Csource_posts%5C%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%5C1678235566538.jpg.jpg" alt="1678235566538.jpg"></p></li><li><p>坐标变换</p></li></ol><h2 id="图像增强"><a href="#图像增强" class="headerlink" title="图像增强"></a>图像增强</h2><p>简单变换</p><h1 id="直方图处理3-3"><a href="#直方图处理3-3" class="headerlink" title="直方图处理3.3"></a>直方图处理3.3</h1><p>看亮度。横坐标r,纵坐标取值</p><p>直方图增强（是直方图均匀分布）：均衡化，规定化（与目的的增强目标）</p><p>直方变换：</p><ol><li>单调</li><li>排列次序不变</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-di-er-zhang.html"/>
+      <url>/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-di-er-zhang.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数字图像处理第二章"><a href="#数字图像处理第二章" class="headerlink" title="数字图像处理第二章"></a>数字图像处理第二章</h1><h2 id="1-视觉基础"><a href="#1-视觉基础" class="headerlink" title="1. 视觉基础"></a>1. 视觉基础</h2><p>人眼结构：视网膜上感光细胞（锥细胞细节颜色敏感、柱细胞）</p><p><img src="G:%5CmyBlog%5CHexo%5Csource_posts%5C%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%5C1677631095249.jpg.jpg" alt="1677631095249.jpg"></p><p>HVS特性：</p><ol><li><p>空间频域低通线性系统，对太高频率不敏感</p></li><li><p>亮度相应对数非线性</p></li><li><p>对亮度信号的空间分辨能力大于对色度信号的空间分辨能力</p></li><li><p>边缘信息很重要</p></li><li><p>视觉遮掩效应是一种局部效应，受背景照度、纹理复杂性和信号频率的影响。</p></li><li><p>人眼主要看物体与周边物体亮度差异</p></li><li><p>亮度适应</p></li></ol><p>亮度对比计算公式：<br>$$<br>C_r=abs(B-B_0)/B_0*100%<br>$$<br>对比灵敏度：<br>$$<br>delta = 0.1<br>$$<br>单色（没有颜色的光视觉）模型：低通滤波器（人眼的光学系统）接高通滤波器（Mash效应），线性模型。</p><p>空间量化：均匀量化</p><p>亮度量化：非均匀，</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/opengl/opengl-xuan-ran-yuv-shu-ju.html"/>
+      <url>/opengl/opengl-xuan-ran-yuv-shu-ju.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="opengl渲染YUV数据"><a href="#opengl渲染YUV数据" class="headerlink" title="opengl渲染YUV数据"></a>opengl渲染YUV数据</h2><h3 id="1-yuv格式"><a href="#1-yuv格式" class="headerlink" title="1. yuv格式"></a>1. yuv格式</h3><p>现有宽为w高为h的一个视频，现在定义了一个data[] bytes变量并存储了这个视频的一帧数据。</p><p>bytes数组中，先连续存储每个像素的灰度信息，y通道占w<em>h个字节；<br>然后顺序存储颜色数据，u和v分别占一个字节，每个颜色数据共占2个字节，所以uv通道占(w/2)(h/2)2=w</em>h/2个字。</p><h4 id="采样"><a href="#采样" class="headerlink" title="采样"></a>采样</h4><p><code>YUV</code> （<code>Y&#39;CbCr</code>）是一种像素格式，常见于视频编码与静态图像。与 <code>RGB</code> 格式（红-绿-蓝）相反，YUV 分别由一个称为 <code>Y</code>（相当于灰度）的“亮度”分量（Luminance or Luma）和两个称为 <code>U</code>（蓝色投影 <code>Cb</code>）和 <code>V</code>（红色投影 <code>Cr</code>）的“色度”分量（Chrominance or Chroma）表示，由此得名。</p><p>仅有 Y 分量而没有 UV 分量信息，一样可以显示完整的黑白（灰度）图像，解决了模拟信号电视黑白与彩色的兼容问题。</p><p>色度通道（UV）的采样率可以低于亮度通道（Y），而不会显着降低感知质量。一种称为 “A:B:C” 的表示法用于描述相对于 Y 采样， U 和 V 的频率：</p><ul><li>4:4:4 表示不降低色度（UV）通道的采样率。每个 Y 分量对应一组 UV 分量。</li><li>4:2:2 表示 2:1 水平下采样，没有垂直下采样。每两个 Y 分量共享一组 UV 分量。</li><li>4:2:0 表示 2:1 水平下采样，同时 2:1 垂直下采样。每四个 Y 分量共享一组 UV 分量。</li><li>4:1:1 表示 4:1 水平下采样，没有垂直下采样。每四个 Y 分量共享一组 UV 分量。4:1:1 采样比其他格式少见，本文不再详细讨论。</li></ul><p>下图显示了如何针对每个下采样率采样色度。亮度样本用十字表示，色度样本用圆圈表示。</p><p><img src="G:%5CmyBlog%5CHexo%5Csource_posts%5Copengl%5Cwebp" alt="img"></p><h4 id="存储格式"><a href="#存储格式" class="headerlink" title="存储格式"></a>存储格式</h4><p>YUV 在存储上通常分为平面格式（<code>Planar</code>），半平面格式（<code>Semi-Planar</code>）以及打包格式（<code>Packed</code>）。</p><p><code>YU12</code> 即 <code>I420</code>，也叫 <code>IYUV</code>，属于 <code>YUV420P</code> 格式。三个平面，分别存储 Y U V 分量。每四个 Y 分量共享一组 UV 分量。U、V 平面的 strides, width 和 height 都是 Y 平面的一半，因此一个像素 12 bits，内存排列如下图所示：</p><p><img src="G:%5CmyBlog%5CHexo%5Csource_posts%5Copengl%5Cyuv" alt="img"></p><h3 id="2-纹理"><a href="#2-纹理" class="headerlink" title="2. 纹理"></a>2. 纹理</h3><h4 id="2-1-纹理组成"><a href="#2-1-纹理组成" class="headerlink" title="2.1 纹理组成"></a>2.1 纹理组成</h4><ul><li>y通道的数据生成一个opengl纹理；</li><li>uv通道的数据生成一个opengl纹理；</li><li>两个纹理作为渲染时的输入，在渲染过程中由GPU组装还原出来视频画面。</li></ul><p>yv12是三个纹理是y一个，u一个，v一个；nv12是y一个，uv一个。</p><h4 id="2-2-纹理格式"><a href="#2-2-纹理格式" class="headerlink" title="2.2 纹理格式"></a>2.2 纹理格式</h4><ul><li>GL_LUMINANCE 纹理用来加载 NV21 Y Plane 的数据；</li><li>GL_LUMINANCE_ALPHA 纹理用来加载 UV Plane 的数据。</li></ul><h3 id="3-渲染步骤"><a href="#3-渲染步骤" class="headerlink" title="3. 渲染步骤"></a>3. 渲染步骤</h3><ul><li><p>第一步：初始化上下文</p></li><li><p>第二步：初始化着色器程序（编译链接着色器程序，生成2个纹理–&gt;确定纹理坐标及对应的顶点坐标–&gt;加载纹理坐标和顶点坐标数据到着色器程序）；</p></li><li><p>第三步：初始化buffer；</p></li><li><p>第四步：初始化纹理（分别加载NV21的两个Plane数据到2个纹理）；</p></li><li><p>第五步：绘制。</p><h3 id="4-代码实现"><a href="#4-代码实现" class="headerlink" title="4. 代码实现"></a>4. 代码实现</h3></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣刷题之链表</title>
+      <link href="/li-kou-shua-ti-zhi-lian-biao.html"/>
+      <url>/li-kou-shua-ti-zhi-lian-biao.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-链表基础"><a href="#1-链表基础" class="headerlink" title="1. 链表基础"></a>1. 链表基础</h1><p><img src="%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E4%B9%8B%E9%93%BE%E8%A1%A8/20200806194529815.png" alt="链表1"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 刷题记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>client源码分析</title>
       <link href="/client-yuan-ma-fen-xi.html"/>
       <url>/client-yuan-ma-fen-xi.html</url>

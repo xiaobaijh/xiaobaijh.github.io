@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.xiaobaijh.cn/"/>
-  <updated>2022-12-12T05:00:22.735Z</updated>
+  <updated>2023-10-02T13:49:42.394Z</updated>
   <id>https://www.xiaobaijh.cn/</id>
   
   <author>
@@ -15,6 +15,121 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.xiaobaijh.cn/1.ji-chu-gai-nian.html"/>
+    <id>https://www.xiaobaijh.cn/1.ji-chu-gai-nian.html</id>
+    <published>2023-10-01T05:38:20.114Z</published>
+    <updated>2023-10-02T13:49:42.394Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;预备知识&lt;/p&gt;
+&lt;h2 id=&quot;1-基础概念&quot;&gt;&lt;a href=&quot;#1-基础概念&quot; class=&quot;headerlink&quot; title=&quot;1. 基础概念&quot;&gt;&lt;/a&gt;1.
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.xiaobaijh.cn/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-2.4.html"/>
+    <id>https://www.xiaobaijh.cn/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-2.4.html</id>
+    <published>2023-03-08T02:32:35.513Z</published>
+    <updated>2023-03-08T02:32:35.513Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;数字图像处理2-4&quot;&gt;&lt;a href=&quot;#数字图像处理2-4&quot; class=&quot;headerlink&quot; title=&quot;数字图像处理2.4&quot;&gt;&lt;/a&gt;数字图像处理2.4&lt;/h1&gt;&lt;h2 id=&quot;图像的运算&quot;&gt;&lt;a href=&quot;#图像的运算&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.xiaobaijh.cn/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-di-er-zhang.html"/>
+    <id>https://www.xiaobaijh.cn/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-di-er-zhang.html</id>
+    <published>2023-03-01T00:40:56.934Z</published>
+    <updated>2023-03-01T07:58:30.866Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;数字图像处理第二章&quot;&gt;&lt;a href=&quot;#数字图像处理第二章&quot; class=&quot;headerlink&quot; title=&quot;数字图像处理第二章&quot;&gt;&lt;/a&gt;数字图像处理第二章&lt;/h1&gt;&lt;h2 id=&quot;1-视觉基础&quot;&gt;&lt;a href=&quot;#1-视觉基础&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.xiaobaijh.cn/opengl/opengl-xuan-ran-yuv-shu-ju.html"/>
+    <id>https://www.xiaobaijh.cn/opengl/opengl-xuan-ran-yuv-shu-ju.html</id>
+    <published>2023-02-23T15:55:20.948Z</published>
+    <updated>2023-02-23T15:55:20.948Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;opengl渲染YUV数据&quot;&gt;&lt;a href=&quot;#opengl渲染YUV数据&quot; class=&quot;headerlink&quot; title=&quot;opengl渲染YUV数据&quot;&gt;&lt;/a&gt;opengl渲染YUV数据&lt;/h2&gt;&lt;h3 id=&quot;1-yuv格式&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>力扣刷题之链表</title>
+    <link href="https://www.xiaobaijh.cn/li-kou-shua-ti-zhi-lian-biao.html"/>
+    <id>https://www.xiaobaijh.cn/li-kou-shua-ti-zhi-lian-biao.html</id>
+    <published>2022-12-13T05:58:07.000Z</published>
+    <updated>2022-12-13T15:28:48.022Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-链表基础&quot;&gt;&lt;a href=&quot;#1-链表基础&quot; class=&quot;headerlink&quot; title=&quot;1. 链表基础&quot;&gt;&lt;/a&gt;1. 链表基础&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="刷题记录" scheme="https://www.xiaobaijh.cn/categories/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://www.xiaobaijh.cn/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>client源码分析</title>
