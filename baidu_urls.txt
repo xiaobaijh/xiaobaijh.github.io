@@ -1,4 +1,3 @@
-https://www.xiaobaijh.cn/1.ji-chu-gai-nian.html
 https://www.xiaobaijh.cn/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-2.4.html
 https://www.xiaobaijh.cn/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-di-er-zhang.html
 https://www.xiaobaijh.cn/opengl/opengl-xuan-ran-yuv-shu-ju.html
@@ -7,3 +6,4 @@ https://www.xiaobaijh.cn/client-yuan-ma-fen-xi.html
 https://www.xiaobaijh.cn/webrtc-peerconnection-fen-xi.html
 https://www.xiaobaijh.cn/ge-ren-bo-ke-da-jian.html
 https://www.xiaobaijh.cn/hello-world.html
+https://www.xiaobaijh.cn/1.ji-chu-gai-nian.html
