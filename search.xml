@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>预备知识</title>
+      <link href="/yu-bei-zhi-shi.html"/>
+      <url>/yu-bei-zhi-shi.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="pytorch基本操作"><a href="#pytorch基本操作" class="headerlink" title="pytorch基本操作"></a>pytorch基本操作</h2><ol><li>tensor 就是数组，可以通过 <code>x.shape</code>获取维度，x.size()获取大小<code>x.numel()</code>获取元素个数，<code>x.reshape()</code>改变张量形状，不改变元素数量和元素值。我们可以通过-1来调用此自动计算出维度的功能。即我们可以<br>用<code>x.reshape(-1,4</code>)或<code>x.reshape(3,-1)</code>来取代<code>x.reshape(3,4)</code>。<code>torch.zeros()</code>或<code>torch.ones()</code>可以初始化全0/全1数组，<code>torch.randn()</code>随机初始化一个数组</li></ol><ol start="2"><li><p>常见的标准算术运算符$（+,-,<em>,/和*</em>）$都可以对张量按元素逐个运算，也可以<code>torch.exp(x)</code>求幂运算，当然前提是元素维度相同。元素维度不同时要通过广播解决</p></li><li><p>如果我们想为多个元素赋值相同的值，我们只需要索引所有元素，然后为它们赋值。例如，[0:2, :]访问第1行和第2行，其中“:”代表沿轴1（列）的所有元素。</p></li><li><p>执行原地操作，使用切片例如Y[:]=<experission>，从而减少内存开销</experission></p></li><li><p>tensor也可以转成python内置数据类型</p></li></ol><h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>一般使用pandas预处理数据</p><ol><li>读取数据可以用<code>pd.read_csv</code>等</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>基础</title>
+      <link href="/ji-chu.html"/>
+      <url>/ji-chu.html</url>
+      
+        <content type="html"><![CDATA[<ol><li>基础概念</li></ol><p>机器学习要解决的场景只需要定义一个灵活的程序算法，其输出由许多<em>参数</em>（parameter）决定，然后使用数据集来确定当下的“最佳参数集”，这些参数通过某种性能度量方式来达到完成任务的最佳性能。</p><p>参数可以被看作旋钮，旋钮的转动可以调整程序的行为。 任一调整参数后的程序被称为<strong><em>模型</em></strong>（model）。 通过操作参数而生成的所有不同程序（输入-输出映射）的集合称为“模型族”。 使用数据集来选择参数的元程序被称为<strong><em>学习算法</em>（</strong>learning algorithm）。</p><p>学习的过程：</p><ol><li><p>从一个随机初始化参数的模型开始，这个模型基本没有“智能”；</p></li><li><p>获取一些数据样本（例如，音频片段以及对应的是或否标签）；</p></li><li><p>调整参数，使模型在这些样本中表现得更好；</p></li><li><p>重复第（2）步和第（3）步，直到模型在任务中的表现令人满意。</p></li></ol><p><img src="https://zh-v2.d2l.ai/_images/ml-loop.svg" alt="/images/mlloopsvg"></p><h2 id="机器学习必备组件"><a href="#机器学习必备组件" class="headerlink" title="机器学习必备组件"></a>机器学习必备组件</h2><p>一般的必备组件：</p><ol><li><p>可以用来学习的<em>数据</em>（data）；</p></li><li><p>如何转换数据的<em>模型</em>（model）；</p></li><li><p>一个<em>目标函数</em>（objective function），用来量化模型的有效性；</p></li><li><p>调整模型参数以优化目标函数的<em>算法</em>（algorithm）。</p></li></ol><p>当每个样本的特征类别数量都是相同的时候，其特征向量是固定长度的，这个长度被称为数据的<em>维数</em>（dimensionality）</p><p>在机器学习中，我们需要定义模型的优劣程度的度量，这个度量在大多数情况是“可优化”的，这被称之为<em>目标函数</em>（objective function）。 我们通常定义一个目标函数，并希望优化它到最低点。 因为越低越好，所以这些函数有时被称为<em>损失函数</em>（loss function，或cost function）。</p><p>度学习中，大多流行的优化算法通常基于一种基本方法–<em>梯度下降</em>（gradient descent）。 简而言之，在每个步骤中，梯度下降法都会检查每个参数，看看如果仅对该参数进行少量变动，训练集损失会朝哪个方向移动。</p><h2 id="各种机器学习问题"><a href="#各种机器学习问题" class="headerlink" title="各种机器学习问题"></a>各种机器学习问题</h2><p><strong>监督学习</strong></p><p>监督学习的学习过程一般可以分为三大步骤：</p><ol><li><p>从已知大量数据样本中随机选取一个子集，为每个样本获取真实标签。有时，这些样本已有标签（例如，患者是否在下一年内康复？）；有时，这些样本可能需要被人工标记（例如，图像分类）。这些输入和相应的标签一起构成了训练数据集；</p></li><li><p>选择有监督的学习算法，它将训练数据集作为输入，并输出一个“已完成学习的模型”；</p></li><li><p>将之前没有见过的样本特征放到这个“已完成学习的模型”中，使用模型的输出作为相应标签的预测。</p></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-2.4.html"/>
       <url>/shu-zi-tu-xiang-chu-li-di-er-zhang/shu-zi-tu-xiang-chu-li-2.4.html</url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.xiaobaijh.cn/"/>
-  <updated>2023-03-08T02:32:35.513Z</updated>
+  <updated>2023-10-03T14:53:40.390Z</updated>
   <id>https://www.xiaobaijh.cn/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>预备知识</title>
+    <link href="https://www.xiaobaijh.cn/yu-bei-zhi-shi.html"/>
+    <id>https://www.xiaobaijh.cn/yu-bei-zhi-shi.html</id>
+    <published>2023-10-02T14:10:45.000Z</published>
+    <updated>2023-10-03T14:53:40.390Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;pytorch基本操作&quot;&gt;&lt;a href=&quot;#pytorch基本操作&quot; class=&quot;headerlink&quot; title=&quot;pytorch基本操作&quot;&gt;&lt;/a&gt;pytorch基本操作&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;tensor 就是数组，可以通过
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基础</title>
+    <link href="https://www.xiaobaijh.cn/ji-chu.html"/>
+    <id>https://www.xiaobaijh.cn/ji-chu.html</id>
+    <published>2023-10-01T14:08:21.000Z</published>
+    <updated>2023-10-02T14:08:47.650Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;基础概念&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;机器学习要解决的场景只需要定义一个灵活的程序算法，其输出由许多&lt;em&gt;参数&lt;/em&gt;（parameter）决定，然后使用数据集来确定当下的“最佳参数集”，这些参数通过某种性能度量方式来达到完成任务的最佳性能。&lt;/p&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -195,7 +244,7 @@
     <link href="https://www.xiaobaijh.cn/1.ji-chu-gai-nian.html"/>
     <id>https://www.xiaobaijh.cn/1.ji-chu-gai-nian.html</id>
     <published>2022-10-01T07:35:23.000Z</published>
-    <updated>2023-10-02T14:00:43.284Z</updated>
+    <updated>2023-10-02T14:08:49.248Z</updated>
     
     <summary type="html">
     

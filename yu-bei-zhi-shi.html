@@ -4,8 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="WebRTC视频采集“, xiaobaijh`s Blog">
-    <meta name="description" content>
+    <meta name="keywords" content="预备知识, xiaobaijh`s Blog">
+    <meta name="description" content="pytorch基本操作
+tensor 就是数组，可以通过 x.shape获取维度，x.size()获取大小x.numel()获取元素个数，x.reshape()改变张量形状，不改变元素数量和元素值。我们可以通过-1来调用此自动计算出维度的功">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>WebRTC视频采集“ | xiaobaijh`s Blog</title>
+    <title>预备知识 | xiaobaijh`s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -529,12 +530,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">WebRTC视频采集“</h1>
+                    <h1 class="description center-align post-title">预备知识</h1>
                 </div>
             </div>
         </div>
@@ -570,7 +571,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-01-13
+                    2023-10-02
                 </div>
                 
 
@@ -579,7 +580,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    299
                 </div>
                 
 
@@ -596,7 +597,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="pytorch基本操作"><a href="#pytorch基本操作" class="headerlink" title="pytorch基本操作"></a>pytorch基本操作</h2><ol>
+<li>tensor 就是数组，可以通过 <code>x.shape</code>获取维度，x.size()获取大小<code>x.numel()</code>获取元素个数，<code>x.reshape()</code>改变张量形状，不改变元素数量和元素值。我们可以通过-1来调用此自动计算出维度的功能。即我们可以<br>用<code>x.reshape(-1,4</code>)或<code>x.reshape(3,-1)</code>来取代<code>x.reshape(3,4)</code>。<code>torch.zeros()</code>或<code>torch.ones()</code>可以初始化全0/全1数组，<code>torch.randn()</code>随机初始化一个数组</li>
+</ol>
+<ol start="2">
+<li><p>常见的标准算术运算符$（+,-,<em>,/和*</em>）$都可以对张量按元素逐个运算，也可以<code>torch.exp(x)</code>求幂运算，当然前提是元素维度相同。元素维度不同时要通过广播解决</p>
+</li>
+<li><p>如果我们想为多个元素赋值相同的值，我们只需要索引所有元素，然后为它们赋值。例如，[0:2, :]访问第1行和第2行，其中“:”代表沿轴1（列）的所有元素。</p>
+</li>
+<li><p>执行原地操作，使用切片例如Y[:]=<experission>，从而减少内存开销</experission></p>
+</li>
+<li><p>tensor也可以转成python内置数据类型</p>
+</li>
+</ol>
+<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>一般使用pandas预处理数据</p>
+<ol>
+<li>读取数据可以用<code>pd.read_csv</code>等</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -657,13 +675,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/webrtc-shi-pin-cai-ji.html">
+                <a href="/yu-bei-zhi-shi.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="WebRTC视频采集“">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="预备知识">
                         
-                        <span class="card-title">WebRTC视频采集“</span>
+                        <span class="card-title">预备知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -674,7 +692,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-02
                             </span>
                         <span class="publish-author">
                             
@@ -695,13 +713,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/li-kou-shua-ti-zhi-lian-biao.html">
+                <a href="/ji-chu.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="力扣刷题之链表">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="基础">
                         
-                        <span class="card-title">力扣刷题之链表</span>
+                        <span class="card-title">基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -712,27 +730,15 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-01
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/刷题记录/" class="post-category">
-                                    刷题记录
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            wjh
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
-                    </a>
-                    
                 </div>
                 
             </div>
