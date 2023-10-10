@@ -4,11 +4,50 @@
   
     
     <entry>
+      <title>多层感知机</title>
+      <link href="/duo-ceng-gan-zhi-ji.html"/>
+      <url>/duo-ceng-gan-zhi-ji.html</url>
+      
+        <content type="html"><![CDATA[<p>最简单的深度网络称为多层感知机。多层感知机由多层神经元组成，每一层与它的上一层相连，从中接收输入；同时每一层也与它的下一层相连，影响当前层的神经元。</p><h2 id="隐藏层"><a href="#隐藏层" class="headerlink" title="隐藏层"></a>隐藏层</h2><p>网络中加入一个或多个隐藏层来客服线性模型的限制，简单的方法是将许多全连接层堆叠在一起。每一层都输出到上面的层，直到生成最后的输出。我们可以把前L−1层看作表示，把最后一层看作线性预测器。称为多层感知机（MLP）</p><p>多层感知机参数可能会很多，开销巨大。</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-15-32-31-image.png" alt></p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-15-34-10-image.png" alt></p><p>在仿射变换后对每个隐藏单元应用非线性激活函数,激活函数的输出（例如，σ(·)）被称为活性值（activations）</p><h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>激活函数（activation function）通过计算加权和并加上偏置来确定神经元是否应该被激活，它们将输入信号转换为输出的可微运算。大多数激活函数都是非线性的。<strong>不管是单层感知机还是多个感知器，只要不带激活函数，都只能解决线性可分的问题</strong></p><h3 id="ReLU"><a href="#ReLU" class="headerlink" title="ReLU"></a>ReLU</h3><p>给定元素x，ReLU函数被定义为该元素与0的最大值</p><p>使用ReLU的原因是，它求导表现得特别好：要么让参数消失，要么让参数通过。这使得优化表现得更好，并且ReLU减轻了困扰以往神经网络的梯度消失问题。</p><p>注意，ReLU函数有许多变体，包括参数化ReLU（Parameterized ReLU，pReLU）函数 (He et al., 2015)。该变体为ReLU添加了一个线性项，因此即使参数是负的，某些信息仍然可以通过</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-15-43-57-image.png" alt></p><h3 id="sigmoid函数"><a href="#sigmoid函数" class="headerlink" title="sigmoid函数"></a>sigmoid函数</h3><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-15-44-54-image.png" alt></p><p>sigmoid在隐藏层中已经较少使用，它在大部分时候被更简单、更容易训练的ReLU所取代</p><h3 id="tanh函数"><a href="#tanh函数" class="headerlink" title="tanh函数"></a>tanh函数</h3><h2 id="多层感知机实现"><a href="#多层感知机实现" class="headerlink" title="多层感知机实现"></a>多层感知机实现</h2><p><code>torch.randn()</code> 返回一个符合均值为0，方差为1的<a href="https://so.csdn.net/so/search?q=%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83&spm=1001.2101.3001.7020" target="_blank" rel="noopener">正态分布</a>（标准正态分布）中填充随机数的张量,可以用在神经</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>线性神经网络</title>
+      <link href="/xian-xing-shen-jing-wang-luo.html"/>
+      <url>/xian-xing-shen-jing-wang-luo.html</url>
+      
+        <content type="html"><![CDATA[<p>回归（regression）是能为一个或多个自变量与因变量之间关系建模的一类方法。在自然科学和社会科学领域，回归经常用来表示输入和输出之间的关系</p><p>线性回归基于几个简单的假设：首先，假设自变量x和因变量y之间的关系是线性的，即y可以表示为x中元素的加权和，这里通常允许包含观测值的一些噪声；其次，我们假设任何噪声都比较正常，如噪声遵循正态分布。</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-15-21-37-image.png" alt></p><p>给定训练数据特征X和对应的已知标签y，线性回归的目标是找到一组权重向量w和偏置b：当给定从X的同分布中取样的新样本特征时，这组权重向量和偏置能够使得新样本预测标签的误差尽可能小。</p><h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>损失函数（loss function）能够量化目标的实际值与预测值之间的差距。通常我们会选择非负数作为损失，且数值越小表示损失越小，完美预测时的损失为0。回归问题中最常用的损失函数是平方误差函数</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-15-58-43-image.png" alt></p><p>计算所有训练样本上的总损失</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-15-59-36-image.png" alt></p><p>训练时，希望寻找一组参数$ (w^*,b)$使得所有样本上的总损失最小。线性回归的有解析解</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-16-12-54-image.png" alt></p><p>推导见<a href="https://blog.csdn.net/a755199443/article/details/104198033" target="_blank" rel="noopener">[回归] 线性回归之解析解的推导过程_线性回归方程解析解求导-CSDN博客</a></p><h2 id="随机梯度下降"><a href="#随机梯度下降" class="headerlink" title="随机梯度下降"></a>随机梯度下降</h2><p>梯度下降最简单的用法是计算损失函数（数据集中所有样本的损失均值）关于模型参数的导数（在这里也可以称为梯度）。[梯度下降的理解](<a href="https://zhuanlan.zhihu.com/p/261375491" target="_blank" rel="noopener">Gradient-Descent（全世界最通俗易懂的梯度下降法详解-优化函数大法） - 知乎 (zhihu.com)</a>)但实际中的执行可能会非常慢：因为在每一次更新参数之前，我们必须遍历整个数据集。因此，我们通常会在每次需要计算更新的时候随机抽取一小批样本，这种变体叫做<strong>小批量随机梯度下降</strong>（mini batch stochastic gradient descent）。</p><p>在每次迭代中，我们首先随机抽样一个小批量B，它是由固定数量的训练样本组成的。然后，我们计算小批量的平均损失关于模型参数的导数（也可以称为梯度）。最后，我们将梯度乘以一个预先确定的正数η，并从当前参数的值中减掉</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-16-18-37-image.png" alt></p><p>算法的步骤如下：（1）初始化模型参数的值，如随机初始化；（2）从数据集中随机抽取小批量样本且在负梯度的方向上更新参数，并不断迭代这一步骤</p><p>η表示学习率（learning rate）。批量大小和学习率的值通常是手动预先指定，而不是通过模型训练得到的。这些可以调整但不在训练过程中更新的参数称为超参(hyperparameter）。调参（hyperparameter tuning）是选择超参数的过程。</p><p>[随机梯度下降的理解](<a href="https://www.zhihu.com/question/27012077/answer/122359602" target="_blank" rel="noopener">(51 封私信 / 81 条消息) 为什么随机梯度下降方法能够收敛？ - 知乎 (zhihu.com)</a>)</p><h2 id="矢量化加速"><a href="#矢量化加速" class="headerlink" title="矢量化加速"></a>矢量化加速</h2><p>使用torch库的矢量相加比直接使用python运算快的多。</p><h3 id="动手实现"><a href="#动手实现" class="headerlink" title="动手实现"></a>动手实现</h3><ol><li><p><code>torch.matual()</code>是<a href="[torch.matmul()用法介绍-CSDN博客](https://blog.csdn.net/qsmx666/article/details/105783610)">tensor的乘法</a>，输入可以是高维的。<br>当输入都是二维时，就是普通的<a href="https://so.csdn.net/so/search?q=%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95&spm=1001.2101.3001.7020" target="_blank" rel="noopener">矩阵乘法</a>，和<code>tensor.mm</code>函数用法相同</p></li><li><p>可以使用pytorch的库加速模型的搭建。</p></li><li><p>这一单层被称为全连接层（fully‐connected layer），因为它的每一个输入都<br>通过矩阵‐向量乘法得到它的每个输出。</p></li><li><p>net = nn.Sequential(nn.Linear(2, 1))，linear就是一个线性层</p></li></ol><h2 id="Softmax回归"><a href="#Softmax回归" class="headerlink" title="Softmax回归"></a>Softmax回归</h2><p>为了解决分类问题等，是全连接层</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-11-27-00-image.png" alt></p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-11-27-09-image.png" alt></p><p>输出不能直接视为概率</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-11-28-48-image.png" alt></p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-11-30-27-image.png" alt></p><p>称为交叉熵损失</p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-11-33-02-image.png" alt></p><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-08-13-56-07-image.png" alt></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>预备知识</title>
+      <link href="/yu-bei-zhi-shi-1.html"/>
+      <url>/yu-bei-zhi-shi-1.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>预备知识</title>
       <link href="/yu-bei-zhi-shi.html"/>
       <url>/yu-bei-zhi-shi.html</url>
       
-        <content type="html"><![CDATA[<h2 id="pytorch基本操作"><a href="#pytorch基本操作" class="headerlink" title="pytorch基本操作"></a>pytorch基本操作</h2><ol><li>tensor 就是数组，可以通过 <code>x.shape</code>获取维度，x.size()获取大小<code>x.numel()</code>获取元素个数，<code>x.reshape()</code>改变张量形状，不改变元素数量和元素值。我们可以通过-1来调用此自动计算出维度的功能。即我们可以<br>用<code>x.reshape(-1,4</code>)或<code>x.reshape(3,-1)</code>来取代<code>x.reshape(3,4)</code>。<code>torch.zeros()</code>或<code>torch.ones()</code>可以初始化全0/全1数组，<code>torch.randn()</code>随机初始化一个数组</li></ol><ol start="2"><li><p>常见的标准算术运算符$（+,-,<em>,/和*</em>）$都可以对张量按元素逐个运算，也可以<code>torch.exp(x)</code>求幂运算，当然前提是元素维度相同。元素维度不同时要通过广播解决</p></li><li><p>如果我们想为多个元素赋值相同的值，我们只需要索引所有元素，然后为它们赋值。例如，[0:2, :]访问第1行和第2行，其中“:”代表沿轴1（列）的所有元素。</p></li><li><p>执行原地操作，使用切片例如Y[:]=<experission>，从而减少内存开销</experission></p></li><li><p>tensor也可以转成python内置数据类型</p></li></ol><h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>一般使用pandas预处理数据</p><ol><li>读取数据可以用<code>pd.read_csv</code>等</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="pytorch基本操作"><a href="#pytorch基本操作" class="headerlink" title="pytorch基本操作"></a>pytorch基本操作</h2><ol><li><p>tensor 就是数组，可以通过 <code>x.shape</code>获取维度，x.size()获取大小<code>x.numel()</code>获取元素个数，<code>x.reshape()</code>改变张量形状，不改变元素数量和元素值。我们可以通过-1来调用此自动计算出维度的功能。即我们可以<br>用<code>x.reshape(-1,4</code>)或<code>x.reshape(3,-1)</code>来取代<code>x.reshape(3,4)</code>。<code>torch.zeros()</code>或<code>torch.ones()</code>可以初始化全0/全1数组，<code>torch.randn()</code>随机初始化一个数组</p></li><li><p>常见的标准算术运算符$（+,-,<em>,/和*</em>）$都可以对张量按元素逐个运算，也可以<code>torch.exp(x)</code>求幂运算，当然前提是元素维度相同。元素维度不同时要通过广播解决</p></li><li><p>如果我们想为多个元素赋值相同的值，我们只需要索引所有元素，然后为它们赋值。例如，[0:2, :]访问第1行和第2行，其中“:”代表沿轴1（列）的所有元素。</p></li><li><p>执行原地操作，使用切片例如Y[:]=<experission>，从而减少内存开销</experission></p></li><li><p>tensor也可以转成python内置数据类型</p></li></ol><h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>一般使用pandas预处理数据</p><ol><li>读取数据可以用<code>pd.read_csv</code>等</li><li>使用data.iloc[]进行切片处理可以分别获取不同列</li><li>fillna()可以填充NAN值</li><li><code>X = torch.tensor(inputs.to_numpy(dtype=float)</code>可以转换成张量形式</li></ol><h2 id="线性代数知识"><a href="#线性代数知识" class="headerlink" title="线性代数知识"></a>线性代数知识</h2><ol><li>张量是描述具有任意数量轴的n维数组的通用方法。例如，向量是一阶张量，矩阵是二阶张量。张量用特殊字体的大写字母表示（例如，X、Y和Z），它们的索引机制（与矩阵类似。</li><li>给定具有相同形状的任意两个张量，任何按元素二元运算的结果都将是相同形状的张量。例如，将两个相同形状的矩阵相加，会在这两个矩阵上执行元素加法。两个矩阵的按元素乘法称为$Hadamard$积.</li><li><code>X.sum()</code>指定<code>axis=0</code>沿0轴按行降维求和，<code>axis=1</code> 按1轴按列降维求和，沿着行和列对矩阵求和，等价于对矩阵的所有元素进行求和。</li><li>一个与求和相关的量是平均值（mean或average）。我们通过将总和除以元素总数来计算平均值。在代码中，我们可以调用函数来计算任意形状张量的平均值。<code>A.mean(), A.sum() / A.numel()</code></li><li><code>torch.dot(x,y)</code>可以求点积</li><li><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-14-05-21-image.png" alt></li><li>当我们为矩阵A和向量x调用torch.mv(A, x)时，会执行矩阵‐向量积</li><li><code>torch.mm()</code>矩阵乘法</li><li><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-14-21-13-image.png" alt></li></ol><p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-14-22-25-image.png" alt></p><h2 id="自动微分"><a href="#自动微分" class="headerlink" title="自动微分"></a>自动微分</h2><h2 id="特征缩放"><a href="#特征缩放" class="headerlink" title="特征缩放"></a>特征缩放</h2><p>具有多个特征时如果不同特征的取值范围相差过大会导致梯度下降过慢，需要特征缩放。方法</p><ol><li><p>数据除以最大值归一化一下；</p></li><li><p>数据都减去平均值再除以最大值减最小值</p></li><li><p>Z-score归一化</p></li></ol>]]></content>
       
       
       

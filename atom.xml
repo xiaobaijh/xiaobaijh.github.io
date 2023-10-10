@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.xiaobaijh.cn/"/>
-  <updated>2023-10-03T14:55:58.814Z</updated>
+  <updated>2023-10-08T12:58:52.924Z</updated>
   <id>https://www.xiaobaijh.cn/</id>
   
   <author>
@@ -17,11 +17,71 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>多层感知机</title>
+    <link href="https://www.xiaobaijh.cn/duo-ceng-gan-zhi-ji.html"/>
+    <id>https://www.xiaobaijh.cn/duo-ceng-gan-zhi-ji.html</id>
+    <published>2023-10-08T06:44:40.000Z</published>
+    <updated>2023-10-08T12:58:52.924Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最简单的深度网络称为多层感知机。多层感知机由多层神经元组成，每一层与它的上一层相连，从中接收输入；同时每一层也与它的下一层相连，影响当前层的神经元。&lt;/p&gt;
+&lt;h2 id=&quot;隐藏层&quot;&gt;&lt;a href=&quot;#隐藏层&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>线性神经网络</title>
+    <link href="https://www.xiaobaijh.cn/xian-xing-shen-jing-wang-luo.html"/>
+    <id>https://www.xiaobaijh.cn/xian-xing-shen-jing-wang-luo.html</id>
+    <published>2023-10-04T06:44:25.000Z</published>
+    <updated>2023-10-08T12:58:54.463Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;回归（regression）是能为一个或多个自变量与因变量之间关系建模的一类方法。在自然科学和社会科学领域，回归经常用来表示输入和输出之间的关系&lt;/p&gt;
+&lt;p&gt;线性回归基于几个简单的假设：首先，假设自变量x和因变量y之间的关系是线性的，即y可以表示为x中元素的加权和，这里通
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>预备知识</title>
+    <link href="https://www.xiaobaijh.cn/yu-bei-zhi-shi-1.html"/>
+    <id>https://www.xiaobaijh.cn/yu-bei-zhi-shi-1.html</id>
+    <published>2023-10-03T14:56:56.000Z</published>
+    <updated>2023-10-03T14:56:56.253Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>预备知识</title>
     <link href="https://www.xiaobaijh.cn/yu-bei-zhi-shi.html"/>
     <id>https://www.xiaobaijh.cn/yu-bei-zhi-shi.html</id>
     <published>2023-10-02T14:10:45.000Z</published>
-    <updated>2023-10-03T14:55:58.814Z</updated>
+    <updated>2023-10-07T09:15:55.178Z</updated>
     
     <summary type="html">
     
@@ -30,7 +90,7 @@
         
         
           &lt;h2 id=&quot;pytorch基本操作&quot;&gt;&lt;a href=&quot;#pytorch基本操作&quot; class=&quot;headerlink&quot; title=&quot;pytorch基本操作&quot;&gt;&lt;/a&gt;pytorch基本操作&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;tensor 就是数组，可以通过
+&lt;li&gt;&lt;p&gt;tensor 就是数组，可以通过
         
       
     
@@ -44,7 +104,7 @@
     <link href="https://www.xiaobaijh.cn/ji-chu.html"/>
     <id>https://www.xiaobaijh.cn/ji-chu.html</id>
     <published>2023-10-01T14:08:21.000Z</published>
-    <updated>2023-10-02T14:08:47.650Z</updated>
+    <updated>2023-10-03T15:19:01.834Z</updated>
     
     <summary type="html">
     

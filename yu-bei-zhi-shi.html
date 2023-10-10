@@ -580,7 +580,7 @@ tensor 就是数组，可以通过 x.shape获取维度，x.size()获取大小x.n
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    299
+                    731
                 </div>
                 
 
@@ -598,9 +598,8 @@ tensor 就是数组，可以通过 x.shape获取维度，x.size()获取大小x.n
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="pytorch基本操作"><a href="#pytorch基本操作" class="headerlink" title="pytorch基本操作"></a>pytorch基本操作</h2><ol>
-<li>tensor 就是数组，可以通过 <code>x.shape</code>获取维度，x.size()获取大小<code>x.numel()</code>获取元素个数，<code>x.reshape()</code>改变张量形状，不改变元素数量和元素值。我们可以通过-1来调用此自动计算出维度的功能。即我们可以<br>用<code>x.reshape(-1,4</code>)或<code>x.reshape(3,-1)</code>来取代<code>x.reshape(3,4)</code>。<code>torch.zeros()</code>或<code>torch.ones()</code>可以初始化全0/全1数组，<code>torch.randn()</code>随机初始化一个数组</li>
-</ol>
-<ol start="2">
+<li><p>tensor 就是数组，可以通过 <code>x.shape</code>获取维度，x.size()获取大小<code>x.numel()</code>获取元素个数，<code>x.reshape()</code>改变张量形状，不改变元素数量和元素值。我们可以通过-1来调用此自动计算出维度的功能。即我们可以<br>用<code>x.reshape(-1,4</code>)或<code>x.reshape(3,-1)</code>来取代<code>x.reshape(3,4)</code>。<code>torch.zeros()</code>或<code>torch.ones()</code>可以初始化全0/全1数组，<code>torch.randn()</code>随机初始化一个数组</p>
+</li>
 <li><p>常见的标准算术运算符$（+,-,<em>,/和*</em>）$都可以对张量按元素逐个运算，也可以<code>torch.exp(x)</code>求幂运算，当然前提是元素维度相同。元素维度不同时要通过广播解决</p>
 </li>
 <li><p>如果我们想为多个元素赋值相同的值，我们只需要索引所有元素，然后为它们赋值。例如，[0:2, :]访问第1行和第2行，其中“:”代表沿轴1（列）的所有元素。</p>
@@ -613,6 +612,30 @@ tensor 就是数组，可以通过 x.shape获取维度，x.size()获取大小x.n
 <h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>一般使用pandas预处理数据</p>
 <ol>
 <li>读取数据可以用<code>pd.read_csv</code>等</li>
+<li>使用data.iloc[]进行切片处理可以分别获取不同列</li>
+<li>fillna()可以填充NAN值</li>
+<li><code>X = torch.tensor(inputs.to_numpy(dtype=float)</code>可以转换成张量形式</li>
+</ol>
+<h2 id="线性代数知识"><a href="#线性代数知识" class="headerlink" title="线性代数知识"></a>线性代数知识</h2><ol>
+<li>张量是描述具有任意数量轴的n维数组的通用方法。例如，向量是一阶张量，矩阵是二阶张量。张量用特殊字体的大写字母表示（例如，X、Y和Z），它们的索引机制（与矩阵类似。</li>
+<li>给定具有相同形状的任意两个张量，任何按元素二元运算的结果都将是相同形状的张量。例如，将两个相同形状的矩阵相加，会在这两个矩阵上执行元素加法。两个矩阵的按元素乘法称为$Hadamard$积.</li>
+<li><code>X.sum()</code>指定<code>axis=0</code>沿0轴按行降维求和，<code>axis=1</code> 按1轴按列降维求和，沿着行和列对矩阵求和，等价于对矩阵的所有元素进行求和。</li>
+<li>一个与求和相关的量是平均值（mean或average）。我们通过将总和除以元素总数来计算平均值。在代码中，我们可以调用函数来计算任意形状张量的平均值。<code>A.mean(), A.sum() / A.numel()</code></li>
+<li><code>torch.dot(x,y)</code>可以求点积</li>
+<li><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-14-05-21-image.png" alt></li>
+<li>当我们为矩阵A和向量x调用torch.mv(A, x)时，会执行矩阵‐向量积</li>
+<li><code>torch.mm()</code>矩阵乘法</li>
+<li><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-14-21-13-image.png" alt></li>
+</ol>
+<p><img src="C:%5CUsers%5Cwjh%5CAppData%5CRoaming%5Cmarktext%5Cimages%5C2023-10-04-14-22-25-image.png" alt></p>
+<h2 id="自动微分"><a href="#自动微分" class="headerlink" title="自动微分"></a>自动微分</h2><h2 id="特征缩放"><a href="#特征缩放" class="headerlink" title="特征缩放"></a>特征缩放</h2><p>具有多个特征时如果不同特征的取值范围相差过大会导致梯度下降过慢，需要特征缩放。方法</p>
+<ol>
+<li><p>数据除以最大值归一化一下；</p>
+</li>
+<li><p>数据都减去平均值再除以最大值减最小值</p>
+</li>
+<li><p>Z-score归一化</p>
+</li>
 </ol>
 
                 
@@ -670,12 +693,11 @@ tensor 就是数组，可以通过 x.shape获取维度，x.size()获取大小x.n
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/yu-bei-zhi-shi.html">
+                <a href="/yu-bei-zhi-shi-1.html">
                     <div class="card-image">
                         
                         
@@ -691,9 +713,9 @@ tensor 就是数组，可以通过 x.shape获取维度，x.size()获取大小x.n
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -702,7 +724,6 @@ tensor 就是数组，可以通过 x.shape获取维度，x.size()获取大小x.n
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
