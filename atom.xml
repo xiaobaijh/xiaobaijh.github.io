@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.xiaobaijh.cn/"/>
-  <updated>2023-10-08T12:58:52.924Z</updated>
+  <updated>2023-10-11T10:27:04.746Z</updated>
   <id>https://www.xiaobaijh.cn/</id>
   
   <author>
@@ -17,11 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>线性代数系列</title>
+    <link href="https://www.xiaobaijh.cn/xian-xing-dai-shu-xi-lie.html"/>
+    <id>https://www.xiaobaijh.cn/xian-xing-dai-shu-xi-lie.html</id>
+    <published>2023-10-11T10:27:04.000Z</published>
+    <updated>2023-10-11T10:27:04.746Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>多层感知机</title>
     <link href="https://www.xiaobaijh.cn/duo-ceng-gan-zhi-ji.html"/>
     <id>https://www.xiaobaijh.cn/duo-ceng-gan-zhi-ji.html</id>
     <published>2023-10-08T06:44:40.000Z</published>
-    <updated>2023-10-08T12:58:52.924Z</updated>
+    <updated>2023-10-12T09:46:53.556Z</updated>
     
     <summary type="html">
     
